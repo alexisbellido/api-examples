@@ -87,3 +87,10 @@ ENV/
 
 # Rope project settings
 .ropeproject
+
+# vim
+*.sw[op]
+
+# nodejs
+node_modules
+npm-debug.log
