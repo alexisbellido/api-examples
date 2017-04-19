@@ -1,5 +1,11 @@
-@import "partials/fonts";
-@import "partials/colors";
+h3 {
+  color: orange;
+}
+
+h1 {
+  font-size: 36px;
+  color: black;
+}
 
 body {
   background: pink;
@@ -16,5 +22,6 @@ body {
 }
 
 div {
-	padding: 15px;
+  padding: 15px;
 }
+
