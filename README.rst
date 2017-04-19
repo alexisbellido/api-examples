@@ -64,6 +64,25 @@ And this is how to get the images for an object (object_id=18383413).
   https://api.collection.cooperhewitt.org/rest/?method=cooperhewitt.objects.getImages&object_id=18383413&access_token={{TOKEN}}
 
 
+API calls from the Node.js REPL
+-----------------------------------
+
+This is using `Axios <https://github.com/mzabriskie/axios>`_ to make an API call.
+
+.. code-block:: javascript
+
+  const axios = require('axios');
+  let token = 'cdc1234b5ef27123b9131b54cb700b5a';
+  axios.get(`https://api.collection.cooperhewitt.org/rest/?method=api.test.echo&access_token=${token}`)
+    .then(function (response) {
+      console.log(response.data);
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+
+Axios assumes the response is already JSON.
+
 Additional references
 ------------------------------
 
