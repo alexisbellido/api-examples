@@ -22,7 +22,30 @@ The tools
 The APIs
 ------------------------------
 
-* `Cooper Hewitt, Smithsonian Design Museum Collections API <https://collection.cooperhewitt.org/api/>`_.
+`Cooper Hewitt, Smithsonian Design Museum Collections API <https://collection.cooperhewitt.org/api/>`_.
+
+Go sign up for an account and then `create a token <https://collection.cooperhewitt.org/api/oauth2/authenticate/like-magic/>`_ to use for your API calls.
+
+Now you can make an API call with the `api.test.echo method <https://collection.cooperhewitt.org/api/methods/api.test.echo>`_. Here's an example from the command line via curl. Note that I've set an environment variable to avoid repeating the token and see how the last two commands pipe the output, first with Python and then with jq to show prettier JSON.
+
+.. code-block:: bash
+
+  $ export TOKEN=cdc1234b5ef27123b9131b54cb700b5a
+  $ echo $TOKEN
+  $ curl -X GET "https://api.collection.cooperhewitt.org/rest/?method=api.test.echo&access_token=$TOKEN"
+  $ curl -X GET "https://api.collection.cooperhewitt.org/rest/?method=api.test.echo&access_token=$TOKEN" | python -m json.tool
+  $ curl -X GET "https://api.collection.cooperhewitt.org/rest/?method=api.test.echo&access_token=$TOKEN" | jq '.'
+
+If you prefer to use Postman, you can set environment global variables to do something similar. For example, you could create a variable named TOKEN and send a GET request to ``https://api.collection.cooperhewitt.org/rest/?method=api.test.echo&access_token={{TOKEN}}``.
+
+This is the desired output:
+
+.. code-block:: json
+
+  {
+    "method": "api.test.echo",
+    "stat": "ok"
+  }
 
 
 Additional references
