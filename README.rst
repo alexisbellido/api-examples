@@ -22,3 +22,19 @@ The APIs
 ------------------------------
 
 * `Cooper Hewitt, Smithsonian Design Museum Collections API <https://collection.cooperhewitt.org/api/>`_.
+
+
+Additional references
+------------------------------
+
+* `More React tests with webpack and Docker <https://github.com/alexisbellido/node-tests>`_.
+
+
+Initial setup
+------------------------------
+
+Create a network to use for your containers.
+
+.. code-block:: bash
+
+  $ docker network create -d bridge zinibu
