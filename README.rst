@@ -37,8 +37,8 @@ You are going to use Docker to make sure your environment is exactly the same as
 
 There are two terms you need to know first:
 
-  * Host. This is your computer, the one where you always work and where you will run Docker. It's called host because from Docker's point of view, this is the computer that will host the containers.
-  * Container. These are the virtual computers running on the host thanks to Docker.
+* Host. This is your computer, the one where you always work and where you will run Docker. It's called host because from Docker's point of view, this is the computer that will host the containers.
+* Container. These are the virtual computers running on the host thanks to Docker.
 
 Start by building a Node.js Docker image with the provided Dockerfile, which is just adding a exposed port to the `official node image <https://hub.docker.com/_/node/>`_. My GitHub name matches my Docker Hub name so I could push this image to my `personal Docker Hub <https://hub.docker.com/u/alexisbellido/>`_.
 
