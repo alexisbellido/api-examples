@@ -19,12 +19,10 @@ The tools
 * There's a little bit of `Docker <https://docs.docker.com/get-started/>`_ to run a development container.
 
 
-The APIs
-------------------------------
+The Cooper Hewitt Collection API
+-----------------------------------
 
-`Cooper Hewitt, Smithsonian Design Museum Collections API <https://collection.cooperhewitt.org/api/>`_.
-
-Go sign up for an account and then `create a token <https://collection.cooperhewitt.org/api/oauth2/authenticate/like-magic/>`_ to use for your API calls.
+Go sign up for an account at `Cooper Hewitt, Smithsonian Design Museum Collections API <https://collection.cooperhewitt.org/api/>`_ and then `create a token <https://collection.cooperhewitt.org/api/oauth2/authenticate/like-magic/>`_ to use for your API calls.
 
 Now you can make an API call with the `api.test.echo method <https://collection.cooperhewitt.org/api/methods/api.test.echo>`_. Here's an example from the command line via curl. Note that I've set an environment variable to avoid repeating the token and see how the last two commands pipe the output, first with Python and then with jq to show prettier JSON.
 
@@ -46,6 +44,24 @@ This is the desired output:
     "method": "api.test.echo",
     "stat": "ok"
   }
+
+This is a call to get a list of exhibitions.
+
+.. code-block::
+
+  https://api.collection.cooperhewitt.org/rest/?method=cooperhewitt.exhibitions.getList&page=1&per_page=5&access_token={{TOKEN}}
+
+This is one to get objects from a specific exhibition (exhibition_id=69117611). Note that I'm limiting the calls to five results from the first page.
+
+.. code-block::
+
+  https://api.collection.cooperhewitt.org/rest/?method=cooperhewitt.exhibitions.getObjects&exhibition_id=69117611&page=1&per_page=5&access_token={{TOKEN}}
+
+And this is how to get the images for an object (object_id=18383413).
+
+.. code-block::
+
+  https://api.collection.cooperhewitt.org/rest/?method=cooperhewitt.objects.getImages&object_id=18383413&access_token={{TOKEN}}
 
 
 Additional references
