@@ -83,6 +83,16 @@ This is using `Axios <https://github.com/mzabriskie/axios>`_ to make an API call
 
 Axios assumes the response is already JSON.
 
+If you want to use JSON from local files.
+
+.. code-block:: javascript
+
+  const exhibitions = require('./src/js/exhibitions.json');
+  console.log(exhibitions.exhibitions[1]);
+  const collection_object = require('./src/js/collection_object.json');
+  console.log(collection_object);
+
+
 Additional references
 ------------------------------
 
