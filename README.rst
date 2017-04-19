@@ -8,6 +8,7 @@ The tools
 ------------------------------
 
 * A good old text editor. I like `vim <http://www.vim.org/>`_ and, for the more visually-inclined developers, `Atom <https://atom.io/>`_.
+* `curl <https://curl.haxx.se/>`_: a command line tool and library for transferring data with URLs.
 * `jq <https://stedolan.github.io/jq/>`_: a command-line JSON processor.
 * `Postman <https://www.getpostman.com/>`_: a GUI for building and testing API requests.
 * Modern Javascript, especially ECMAScript 2015 (also known as ES6) and concepts such as `classes <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes>`_ and `arrow functions <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions>`_.
