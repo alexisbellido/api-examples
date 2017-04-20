@@ -3,14 +3,19 @@ import ReactDOM from 'react-dom';
 
 import Header from './components/Header';
 import ExhibitionPicker from './components/ExhibitionPicker';
+import ExhibitionObjects from './components/ExhibitionObjects';
 
-const name = "Luca";
+class App extends React.Component {
+	// TODO move logic here and pass via props to ExhibitionObjects and ExhibitionPicker
+	render () {
+		return (
+			<div>
+				<Header />
+				<ExhibitionPicker />
+				<ExhibitionObjects />
+			</div>
+		);
+	}
+}
 
-ReactDOM.render(
-	<div>
-		<Header color="red" />
-		<h2>Hello {name}!</h2>
-		<ExhibitionPicker />
-	</div>,
-	document.getElementById('root')
-);
+ReactDOM.render(<App/>, document.getElementById('root'));

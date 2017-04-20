@@ -2,7 +2,6 @@ import React from 'react';
 
 // stateless functional component
 const Header = (props) => {
-
     // using functional component with event
     function handleClick (e) {
         e.preventDefault();
