@@ -16,6 +16,7 @@ The tools
 * `webpack 2 <https://webpack.js.org/>`_: a module bundler for modern JavaScript applications.
 * `Babel <https://babeljs.io/>`_: a javascript compiler.
 * `Node.js <https://nodejs.org/en/>`_ and `npm <https://www.npmjs.com/>`_.
+* `Axios <https://github.com/mzabriskie/axios>`_: a promise-based HTTP client.
 * There's a little bit of `Docker <https://docs.docker.com/get-started/>`_ to run a development container.
 
 
@@ -191,3 +192,9 @@ or locally:
 .. code-block:: bash
 
     $ npm ls --depth=0
+
+
+Questions
+---------------------------------------
+
+You can use GitHub's issues for questions but I also write on `Zinibu <https://www.zinibu.com/>`_ and `Twitter <https://twitter.com/alexisbellido>`_ so I can answer a question or two there.
