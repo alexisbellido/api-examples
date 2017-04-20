@@ -1,16 +1,16 @@
 import React from 'react';
-
 import ReactDOM from 'react-dom';
 
 import Header from './components/Header';
+import ExhibitionPicker from './components/ExhibitionPicker';
 
-const name = "Mono";
+const name = "Luca";
 
 ReactDOM.render(
 	<div>
 		<Header color="red" />
-		<h1>Hello {name}, again!</h1>
-		<h2>{`the name is ${name}`}</h2>
+		<h2>Hello {name}!</h2>
+		<ExhibitionPicker />
 	</div>,
 	document.getElementById('root')
 );
